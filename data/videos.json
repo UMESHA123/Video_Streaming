@@ -1,0 +1,88 @@
+[
+  {
+    "id": "2ce44aac-d86b-40e4-887a-1460be7d377c",
+    "userId": "e29fe5c6-ffd5-4448-9b9a-2ba7da305d9e",
+    "title": "3d website video",
+    "description": "Video upload test",
+    "status": "uploading",
+    "duration": 0,
+    "fileSize": 29876171,
+    "thumbnailUrl": "",
+    "hlsUrl": "",
+    "views": 1,
+    "likes": 0,
+    "tags": [
+      "3d model",
+      "cartoon"
+    ],
+    "createdAt": "2026-03-29T13:23:40.902Z"
+  },
+  {
+    "id": "d76fa431-278e-4404-b397-6e0cc5eb0cc6",
+    "userId": "e29fe5c6-ffd5-4448-9b9a-2ba7da305d9e",
+    "title": "v1",
+    "description": "ss",
+    "status": "uploading",
+    "duration": 0,
+    "fileSize": 6715047,
+    "thumbnailUrl": "",
+    "hlsUrl": "",
+    "views": 0,
+    "likes": 0,
+    "tags": [
+      "ss"
+    ],
+    "createdAt": "2026-03-29T14:40:28.946Z"
+  },
+  {
+    "id": "426e73a5-a34a-4fae-9477-6e083503f5ce",
+    "userId": "e29fe5c6-ffd5-4448-9b9a-2ba7da305d9e",
+    "title": "v1",
+    "description": "s",
+    "status": "failed",
+    "duration": 0,
+    "fileSize": 6715047,
+    "thumbnailUrl": "",
+    "hlsUrl": "",
+    "views": 2,
+    "likes": 0,
+    "tags": [
+      "s"
+    ],
+    "createdAt": "2026-03-30T04:20:52.778Z"
+  },
+  {
+    "id": "c445c733-0474-402b-8ce0-518e6d7d4a56",
+    "userId": "e29fe5c6-ffd5-4448-9b9a-2ba7da305d9e",
+    "title": "TEST_FINAL",
+    "description": "TEST_FINAL",
+    "status": "failed",
+    "duration": 0,
+    "fileSize": 6715047,
+    "thumbnailUrl": "/thumbnails/c445c733-0474-402b-8ce0-518e6d7d4a56.jpg",
+    "hlsUrl": "",
+    "views": 2,
+    "likes": 0,
+    "tags": [
+      "TEST"
+    ],
+    "createdAt": "2026-03-30T04:38:06.288Z"
+  },
+  {
+    "id": "661d016f-0c42-4b1b-a8d8-64daf907e39f",
+    "userId": "e29fe5c6-ffd5-4448-9b9a-2ba7da305d9e",
+    "title": "v1sd",
+    "description": "asd",
+    "status": "ready",
+    "duration": 8,
+    "fileSize": 6715047,
+    "thumbnailUrl": "/thumbnails/661d016f-0c42-4b1b-a8d8-64daf907e39f.jpg",
+    "hlsUrl": "/api/stream/661d016f-0c42-4b1b-a8d8-64daf907e39f/master.m3u8",
+    "views": 6,
+    "likes": 0,
+    "tags": [
+      "asd"
+    ],
+    "createdAt": "2026-03-30T04:45:25.951Z"
+  }
+]

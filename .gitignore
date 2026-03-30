@@ -1,0 +1,12 @@
+node_modules/
+.next/
+dist/
+storage/uploads/*
+storage/videos/*
+storage/thumbnails/*
+storage/avatars/*
+!storage/**/.gitkeep
+.env
+.env.local
+*.log
+.DS_Store

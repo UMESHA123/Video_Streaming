@@ -1,0 +1,12 @@
+[
+  {
+    "id": "e29fe5c6-ffd5-4448-9b9a-2ba7da305d9e",
+    "username": "admin",
+    "email": "admin@streamlocal.com",
+    "passwordHash": "$2a$10$.1JPA1cRV6wLOOB5mfGRcOu6J0t7pwEd0hU/HykZVhRVjpJ7kxMum",
+    "avatarUrl": "",
+    "bio": "",
+    "plan": "free",
+    "createdAt": "2026-03-29T13:22:22.917Z"
+  }
+]
