@@ -30,30 +30,9 @@ A fully local video streaming platform built with **Next.js** and **Express.js**
 
 ## Architecture
 
-```
-┌──────────────────────────────────────────────────────┐
-│                   BROWSER / CLIENT                   │
-│              Next.js App (localhost:3000)             │
-│     Pages (App Router)  │  HLS.js Player  │  Axios   │
-└────────────┬────────────┴───────┬─────────┴────┬─────┘
-             │               HLS stream       REST API
-             │             (m3u8 + .ts)     (JSON responses)
-┌────────────┴────────────────────┴──────────────┴─────┐
-│           EXPRESS.JS API (localhost:4000)             │
-│                                                      │
-│   Routes: /api/auth  /api/videos  /api/stream        │
-│           /api/users  /api/comments                  │
-│                      │                               │
-│        ┌─────────────┼──────────────┐                │
-│   ┌────┴────┐  ┌─────┴───┐  ┌──────┴──────┐         │
-│   │  JSON   │  │ FFmpeg  │  │  Bull Queue │         │
-│   │  DB     │  │ Service │  │  (Redis)    │         │
-│   └────┬────┘  └─────┬───┘  └─────────────┘         │
-│        └─────────────┴───────────────┐               │
-│              LOCAL FILE SYSTEM                        │
-│   /storage/videos/  /storage/thumbnails/  /data/     │
-└──────────────────────────────────────────────────────┘
-```
+<p align="center">
+  <img src="./architecture-diagram.svg" alt="StreamLocal Architecture Diagram" width="100%"/>
+</p>
 
 ---
 

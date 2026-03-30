@@ -1,0 +1,448 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1600" width="1200" height="1600">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap');
+      text { font-family: 'Inter', 'Segoe UI', Arial, sans-serif; }
+      .title { font-size: 28px; font-weight: 700; fill: #f1f5f9; }
+      .subtitle { font-size: 14px; font-weight: 400; fill: #94a3b8; }
+      .section-label { font-size: 16px; font-weight: 700; fill: #f8fafc; letter-spacing: 1px; }
+      .box-label { font-size: 13px; font-weight: 600; fill: #f1f5f9; }
+      .box-sub { font-size: 10px; font-weight: 400; fill: #94a3b8; }
+      .tech-label { font-size: 11px; font-weight: 500; fill: #cbd5e1; }
+      .arrow-label { font-size: 10px; font-weight: 500; fill: #60a5fa; }
+      .pipe-label { font-size: 11px; font-weight: 600; fill: #e2e8f0; }
+      .pipe-step { font-size: 10px; font-weight: 400; fill: #94a3b8; }
+      .quality-label { font-size: 10px; font-weight: 500; fill: #a5f3fc; }
+    </style>
+    <!-- Glow filter -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000" flood-opacity="0.3"/>
+    </filter>
+    <!-- Gradient definitions -->
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a"/>
+      <stop offset="100%" style="stop-color:#020617"/>
+    </linearGradient>
+    <linearGradient id="client-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e3a5f"/>
+      <stop offset="100%" style="stop-color:#172554"/>
+    </linearGradient>
+    <linearGradient id="api-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a2e1a"/>
+      <stop offset="100%" style="stop-color:#14532d"/>
+    </linearGradient>
+    <linearGradient id="storage-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3b1a45"/>
+      <stop offset="100%" style="stop-color:#581c87"/>
+    </linearGradient>
+    <linearGradient id="nextjs-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e293b"/>
+      <stop offset="100%" style="stop-color:#0f172a"/>
+    </linearGradient>
+    <linearGradient id="express-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#065f46"/>
+      <stop offset="100%" style="stop-color:#064e3b"/>
+    </linearGradient>
+    <linearGradient id="blue-box" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e40af"/>
+      <stop offset="100%" style="stop-color:#1e3a8a"/>
+    </linearGradient>
+    <linearGradient id="green-box" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#166534"/>
+      <stop offset="100%" style="stop-color:#14532d"/>
+    </linearGradient>
+    <linearGradient id="purple-box" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#7e22ce"/>
+      <stop offset="100%" style="stop-color:#6b21a8"/>
+    </linearGradient>
+    <linearGradient id="orange-box" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#c2410c"/>
+      <stop offset="100%" style="stop-color:#9a3412"/>
+    </linearGradient>
+    <linearGradient id="teal-box" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f766e"/>
+      <stop offset="100%" style="stop-color:#115e59"/>
+    </linearGradient>
+    <linearGradient id="red-box" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#991b1b"/>
+      <stop offset="100%" style="stop-color:#7f1d1d"/>
+    </linearGradient>
+    <linearGradient id="cyan-box" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#155e75"/>
+      <stop offset="100%" style="stop-color:#164e63"/>
+    </linearGradient>
+    <linearGradient id="amber-box" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#92400e"/>
+      <stop offset="100%" style="stop-color:#78350f"/>
+    </linearGradient>
+    <linearGradient id="pipeline-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#7c3aed"/>
+      <stop offset="50%" style="stop-color:#2563eb"/>
+      <stop offset="100%" style="stop-color:#059669"/>
+    </linearGradient>
+    <!-- Arrow marker -->
+    <marker id="arrowBlue" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#3b82f6"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#22c55e"/>
+    </marker>
+    <marker id="arrowPurple" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#a855f7"/>
+    </marker>
+    <marker id="arrowOrange" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#f97316"/>
+    </marker>
+    <marker id="arrowWhite" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#e2e8f0"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="1600" fill="url(#bg-grad)" rx="0"/>
+
+  <!-- Grid pattern overlay -->
+  <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.5" opacity="0.4"/>
+  </pattern>
+  <rect width="1200" height="1600" fill="url(#grid)"/>
+
+  <!-- Title -->
+  <text x="600" y="50" text-anchor="middle" class="title">StreamLocal — System Architecture</text>
+  <text x="600" y="72" text-anchor="middle" class="subtitle">Full-Stack Local Video Streaming Platform</text>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- CLIENT / BROWSER SECTION                    -->
+  <!-- ═══════════════════════════════════════════ -->
+  <rect x="60" y="95" width="1080" height="230" rx="16" fill="url(#client-grad)" stroke="#2563eb" stroke-width="1.5" filter="url(#shadow)" opacity="0.95"/>
+  <text x="100" y="125" class="section-label" fill="#60a5fa">BROWSER / CLIENT</text>
+  <text x="1100" y="125" text-anchor="end" class="tech-label">http://localhost:3000</text>
+
+  <!-- Next.js App -->
+  <rect x="100" y="140" width="200" height="80" rx="10" fill="url(#nextjs-grad)" stroke="#3b82f6" stroke-width="1"/>
+  <text x="200" y="172" text-anchor="middle" class="box-label">Next.js 14</text>
+  <text x="200" y="190" text-anchor="middle" class="box-sub">App Router / Pages</text>
+
+  <!-- HLS.js Player -->
+  <rect x="340" y="140" width="200" height="80" rx="10" fill="url(#nextjs-grad)" stroke="#3b82f6" stroke-width="1"/>
+  <text x="440" y="172" text-anchor="middle" class="box-label">HLS.js Player</text>
+  <text x="440" y="190" text-anchor="middle" class="box-sub">Adaptive Bitrate</text>
+
+  <!-- Axios Client -->
+  <rect x="580" y="140" width="200" height="80" rx="10" fill="url(#nextjs-grad)" stroke="#3b82f6" stroke-width="1"/>
+  <text x="680" y="172" text-anchor="middle" class="box-label">Axios Client</text>
+  <text x="680" y="190" text-anchor="middle" class="box-sub">REST API Calls + JWT</text>
+
+  <!-- Tailwind CSS -->
+  <rect x="820" y="140" width="200" height="80" rx="10" fill="url(#nextjs-grad)" stroke="#3b82f6" stroke-width="1"/>
+  <text x="920" y="172" text-anchor="middle" class="box-label">Tailwind CSS</text>
+  <text x="920" y="190" text-anchor="middle" class="box-sub">Dark Theme UI</text>
+
+  <!-- Frontend pages row -->
+  <rect x="100" y="240" width="140" height="55" rx="8" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+  <text x="170" y="263" text-anchor="middle" class="box-sub" fill="#93c5fd">Home Feed</text>
+  <text x="170" y="279" text-anchor="middle" class="box-sub">/ (page.tsx)</text>
+
+  <rect x="260" y="240" width="140" height="55" rx="8" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+  <text x="330" y="263" text-anchor="middle" class="box-sub" fill="#93c5fd">Watch Video</text>
+  <text x="330" y="279" text-anchor="middle" class="box-sub">/watch/[id]</text>
+
+  <rect x="420" y="240" width="140" height="55" rx="8" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+  <text x="490" y="263" text-anchor="middle" class="box-sub" fill="#93c5fd">Upload</text>
+  <text x="490" y="279" text-anchor="middle" class="box-sub">/upload</text>
+
+  <rect x="580" y="240" width="140" height="55" rx="8" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+  <text x="650" y="263" text-anchor="middle" class="box-sub" fill="#93c5fd">Search</text>
+  <text x="650" y="279" text-anchor="middle" class="box-sub">/search</text>
+
+  <rect x="740" y="240" width="140" height="55" rx="8" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+  <text x="810" y="263" text-anchor="middle" class="box-sub" fill="#93c5fd">Profile</text>
+  <text x="810" y="279" text-anchor="middle" class="box-sub">/profile/[user]</text>
+
+  <rect x="900" y="240" width="140" height="55" rx="8" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+  <text x="970" y="263" text-anchor="middle" class="box-sub" fill="#93c5fd">Auth</text>
+  <text x="970" y="279" text-anchor="middle" class="box-sub">/auth/login</text>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- CONNECTION ARROWS (Client → API)            -->
+  <!-- ═══════════════════════════════════════════ -->
+
+  <!-- REST API arrow -->
+  <line x1="350" y1="325" x2="350" y2="385" stroke="#3b82f6" stroke-width="2" stroke-dasharray="6,4" marker-end="url(#arrowBlue)"/>
+  <text x="365" y="360" class="arrow-label">REST API (JSON)</text>
+
+  <!-- HLS Stream arrow -->
+  <line x1="600" y1="325" x2="600" y2="385" stroke="#22c55e" stroke-width="2" stroke-dasharray="6,4" marker-end="url(#arrowGreen)"/>
+  <text x="615" y="360" class="arrow-label" fill="#4ade80">HLS Stream (.m3u8 + .ts)</text>
+
+  <!-- JWT arrow -->
+  <line x1="850" y1="325" x2="850" y2="385" stroke="#f97316" stroke-width="2" stroke-dasharray="6,4" marker-end="url(#arrowOrange)"/>
+  <text x="865" y="360" class="arrow-label" fill="#fb923c">JWT Auth Token</text>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- API SERVER SECTION                          -->
+  <!-- ═══════════════════════════════════════════ -->
+  <rect x="60" y="390" width="1080" height="340" rx="16" fill="url(#api-grad)" stroke="#22c55e" stroke-width="1.5" filter="url(#shadow)" opacity="0.95"/>
+  <text x="100" y="420" class="section-label" fill="#4ade80">EXPRESS.JS API SERVER</text>
+  <text x="1100" y="420" text-anchor="end" class="tech-label">http://localhost:4000</text>
+
+  <!-- Middleware row -->
+  <text x="100" y="450" class="tech-label" fill="#86efac">Middleware Layer</text>
+
+  <rect x="100" y="458" width="155" height="42" rx="8" fill="url(#green-box)" stroke="#22c55e" stroke-width="1"/>
+  <text x="177" y="477" text-anchor="middle" class="box-sub" fill="#bbf7d0">CORS</text>
+  <text x="177" y="491" text-anchor="middle" class="box-sub">Origin: localhost:3000</text>
+
+  <rect x="270" y="458" width="155" height="42" rx="8" fill="url(#green-box)" stroke="#22c55e" stroke-width="1"/>
+  <text x="347" y="477" text-anchor="middle" class="box-sub" fill="#bbf7d0">Auth Middleware</text>
+  <text x="347" y="491" text-anchor="middle" class="box-sub">JWT Verify</text>
+
+  <rect x="440" y="458" width="155" height="42" rx="8" fill="url(#green-box)" stroke="#22c55e" stroke-width="1"/>
+  <text x="517" y="477" text-anchor="middle" class="box-sub" fill="#bbf7d0">Upload Middleware</text>
+  <text x="517" y="491" text-anchor="middle" class="box-sub">Multer (10GB max)</text>
+
+  <rect x="610" y="458" width="155" height="42" rx="8" fill="url(#green-box)" stroke="#22c55e" stroke-width="1"/>
+  <text x="687" y="477" text-anchor="middle" class="box-sub" fill="#bbf7d0">Error Handler</text>
+  <text x="687" y="491" text-anchor="middle" class="box-sub">createError()</text>
+
+  <!-- Routes row -->
+  <text x="100" y="525" class="tech-label" fill="#86efac">API Routes</text>
+
+  <rect x="100" y="533" width="175" height="50" rx="8" fill="#0a1f0a" stroke="#166534" stroke-width="1"/>
+  <text x="187" y="555" text-anchor="middle" class="box-sub" fill="#86efac">/api/auth</text>
+  <text x="187" y="571" text-anchor="middle" class="box-sub">Register, Login, Me</text>
+
+  <rect x="290" y="533" width="175" height="50" rx="8" fill="#0a1f0a" stroke="#166534" stroke-width="1"/>
+  <text x="377" y="555" text-anchor="middle" class="box-sub" fill="#86efac">/api/videos</text>
+  <text x="377" y="571" text-anchor="middle" class="box-sub">CRUD, Upload, Like</text>
+
+  <rect x="480" y="533" width="175" height="50" rx="8" fill="#0a1f0a" stroke="#166534" stroke-width="1"/>
+  <text x="567" y="555" text-anchor="middle" class="box-sub" fill="#86efac">/api/stream</text>
+  <text x="567" y="571" text-anchor="middle" class="box-sub">HLS Manifest + Segments</text>
+
+  <rect x="670" y="533" width="175" height="50" rx="8" fill="#0a1f0a" stroke="#166534" stroke-width="1"/>
+  <text x="757" y="555" text-anchor="middle" class="box-sub" fill="#86efac">/api/users</text>
+  <text x="757" y="571" text-anchor="middle" class="box-sub">Profile, History</text>
+
+  <rect x="860" y="533" width="175" height="50" rx="8" fill="#0a1f0a" stroke="#166534" stroke-width="1"/>
+  <text x="947" y="555" text-anchor="middle" class="box-sub" fill="#86efac">/api/comments</text>
+  <text x="947" y="571" text-anchor="middle" class="box-sub">CRUD per Video</text>
+
+  <!-- Services row -->
+  <text x="100" y="612" class="tech-label" fill="#86efac">Services Layer</text>
+
+  <rect x="100" y="620" width="230" height="60" rx="10" fill="url(#orange-box)" stroke="#f97316" stroke-width="1"/>
+  <text x="215" y="645" text-anchor="middle" class="box-label">FFmpeg Service</text>
+  <text x="215" y="662" text-anchor="middle" class="box-sub">Transcode + Thumbnail</text>
+
+  <rect x="350" y="620" width="230" height="60" rx="10" fill="url(#red-box)" stroke="#ef4444" stroke-width="1"/>
+  <text x="465" y="645" text-anchor="middle" class="box-label">Queue Service</text>
+  <text x="465" y="662" text-anchor="middle" class="box-sub">Bull + Redis (with fallback)</text>
+
+  <rect x="600" y="620" width="230" height="60" rx="10" fill="url(#teal-box)" stroke="#14b8a6" stroke-width="1"/>
+  <text x="715" y="645" text-anchor="middle" class="box-label">Search Service</text>
+  <text x="715" y="662" text-anchor="middle" class="box-sub">Fuse.js Fuzzy Search</text>
+
+  <rect x="850" y="620" width="230" height="60" rx="10" fill="url(#cyan-box)" stroke="#06b6d4" stroke-width="1"/>
+  <text x="965" y="645" text-anchor="middle" class="box-label">Storage Service</text>
+  <text x="965" y="662" text-anchor="middle" class="box-sub">File Management</text>
+
+  <!-- DB connector -->
+  <text x="100" y="708" class="tech-label" fill="#86efac">Database</text>
+
+  <rect x="100" y="714" width="280" height="55" rx="10" fill="url(#amber-box)" stroke="#f59e0b" stroke-width="1"/>
+  <text x="240" y="738" text-anchor="middle" class="box-label">lowdb — JSON Flat-File DB</text>
+  <text x="240" y="754" text-anchor="middle" class="box-sub">users.json  |  videos.json  |  comments.json  |  interactions.json</text>
+
+  <!-- Redis -->
+  <rect x="420" y="714" width="200" height="55" rx="10" fill="url(#red-box)" stroke="#ef4444" stroke-width="1"/>
+  <text x="520" y="738" text-anchor="middle" class="box-label">Redis (Optional)</text>
+  <text x="520" y="754" text-anchor="middle" class="box-sub">Bull Job Queue Backend</text>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- ARROWS: API → Storage                       -->
+  <!-- ═══════════════════════════════════════════ -->
+  <line x1="350" y1="735" x2="350" y2="810" stroke="#a855f7" stroke-width="2" stroke-dasharray="6,4" marker-end="url(#arrowPurple)"/>
+  <text x="365" y="790" class="arrow-label" fill="#c084fc">Read / Write</text>
+
+  <line x1="700" y1="735" x2="700" y2="810" stroke="#a855f7" stroke-width="2" stroke-dasharray="6,4" marker-end="url(#arrowPurple)"/>
+  <text x="715" y="790" class="arrow-label" fill="#c084fc">File I/O</text>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- LOCAL FILE STORAGE SECTION                  -->
+  <!-- ═══════════════════════════════════════════ -->
+  <rect x="60" y="815" width="1080" height="190" rx="16" fill="url(#storage-grad)" stroke="#a855f7" stroke-width="1.5" filter="url(#shadow)" opacity="0.95"/>
+  <text x="100" y="845" class="section-label" fill="#d8b4fe">LOCAL FILE SYSTEM</text>
+  <text x="1100" y="845" text-anchor="end" class="tech-label">/storage &amp; /data</text>
+
+  <!-- Storage boxes -->
+  <rect x="100" y="862" width="220" height="70" rx="10" fill="#1a0a2e" stroke="#7c3aed" stroke-width="1"/>
+  <text x="210" y="890" text-anchor="middle" class="box-label">/storage/uploads/</text>
+  <text x="210" y="910" text-anchor="middle" class="box-sub">Raw uploads (temp)</text>
+  <text x="210" y="923" text-anchor="middle" class="box-sub">Deleted after transcode</text>
+
+  <rect x="340" y="862" width="220" height="70" rx="10" fill="#1a0a2e" stroke="#7c3aed" stroke-width="1"/>
+  <text x="450" y="890" text-anchor="middle" class="box-label">/storage/videos/{id}/</text>
+  <text x="450" y="910" text-anchor="middle" class="box-sub">HLS Output</text>
+  <text x="450" y="923" text-anchor="middle" class="box-sub">master.m3u8 + quality dirs</text>
+
+  <rect x="580" y="862" width="220" height="70" rx="10" fill="#1a0a2e" stroke="#7c3aed" stroke-width="1"/>
+  <text x="690" y="890" text-anchor="middle" class="box-label">/storage/thumbnails/</text>
+  <text x="690" y="910" text-anchor="middle" class="box-sub">Auto-extracted JPEG</text>
+  <text x="690" y="923" text-anchor="middle" class="box-sub">{videoId}.jpg (640x360)</text>
+
+  <rect x="820" y="862" width="220" height="70" rx="10" fill="#1a0a2e" stroke="#7c3aed" stroke-width="1"/>
+  <text x="930" y="890" text-anchor="middle" class="box-label">/data/*.json</text>
+  <text x="930" y="910" text-anchor="middle" class="box-sub">JSON Database Files</text>
+  <text x="930" y="923" text-anchor="middle" class="box-sub">users, videos, comments</text>
+
+  <!-- HLS Quality detail -->
+  <rect x="100" y="948" width="680" height="42" rx="8" fill="#0d001a" stroke="#581c87" stroke-width="1"/>
+  <text x="120" y="968" class="quality-label">HLS Quality Levels:</text>
+  <text x="265" y="968" class="box-sub">1080p (4000k)</text>
+  <text x="390" y="968" class="box-sub">720p (2500k)</text>
+  <text x="500" y="968" class="box-sub">480p (1000k)</text>
+  <text x="600" y="968" class="box-sub">360p (500k)</text>
+  <text x="120" y="982" class="box-sub">10-sec segments  |  VOD playlist  |  Adaptive bitrate switching</text>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- VIDEO PROCESSING PIPELINE                   -->
+  <!-- ═══════════════════════════════════════════ -->
+  <text x="600" y="1055" text-anchor="middle" class="section-label" fill="#c4b5fd">VIDEO PROCESSING PIPELINE</text>
+
+  <!-- Pipeline background -->
+  <rect x="60" y="1068" width="1080" height="135" rx="16" fill="#0f0720" stroke="#7c3aed" stroke-width="1" filter="url(#shadow)" opacity="0.9"/>
+
+  <!-- Pipeline steps -->
+  <rect x="85" y="1085" width="115" height="55" rx="8" fill="url(#blue-box)" stroke="#3b82f6" stroke-width="1"/>
+  <text x="142" y="1108" text-anchor="middle" class="box-sub" fill="#93c5fd">1. Upload</text>
+  <text x="142" y="1124" text-anchor="middle" class="box-sub">Multer</text>
+
+  <line x1="200" y1="1112" x2="225" y2="1112" stroke="#60a5fa" stroke-width="1.5" marker-end="url(#arrowBlue)"/>
+
+  <rect x="225" y="1085" width="115" height="55" rx="8" fill="url(#green-box)" stroke="#22c55e" stroke-width="1"/>
+  <text x="282" y="1108" text-anchor="middle" class="box-sub" fill="#bbf7d0">2. Save Raw</text>
+  <text x="282" y="1124" text-anchor="middle" class="box-sub">/uploads/</text>
+
+  <line x1="340" y1="1112" x2="365" y2="1112" stroke="#4ade80" stroke-width="1.5" marker-end="url(#arrowGreen)"/>
+
+  <rect x="365" y="1085" width="115" height="55" rx="8" fill="url(#amber-box)" stroke="#f59e0b" stroke-width="1"/>
+  <text x="422" y="1108" text-anchor="middle" class="box-sub" fill="#fde68a">3. DB Record</text>
+  <text x="422" y="1124" text-anchor="middle" class="box-sub">status: uploading</text>
+
+  <line x1="480" y1="1112" x2="505" y2="1112" stroke="#fbbf24" stroke-width="1.5" marker-end="url(#arrowOrange)"/>
+
+  <rect x="505" y="1085" width="115" height="55" rx="8" fill="url(#red-box)" stroke="#ef4444" stroke-width="1"/>
+  <text x="562" y="1108" text-anchor="middle" class="box-sub" fill="#fca5a5">4. Queue Job</text>
+  <text x="562" y="1124" text-anchor="middle" class="box-sub">Bull / Direct</text>
+
+  <line x1="620" y1="1112" x2="645" y2="1112" stroke="#ef4444" stroke-width="1.5" marker-end="url(#arrowBlue)"/>
+
+  <rect x="645" y="1085" width="115" height="55" rx="8" fill="url(#orange-box)" stroke="#f97316" stroke-width="1"/>
+  <text x="702" y="1108" text-anchor="middle" class="box-sub" fill="#fed7aa">5. Transcode</text>
+  <text x="702" y="1124" text-anchor="middle" class="box-sub">FFmpeg → HLS</text>
+
+  <line x1="760" y1="1112" x2="785" y2="1112" stroke="#f97316" stroke-width="1.5" marker-end="url(#arrowOrange)"/>
+
+  <rect x="785" y="1085" width="115" height="55" rx="8" fill="url(#teal-box)" stroke="#14b8a6" stroke-width="1"/>
+  <text x="842" y="1108" text-anchor="middle" class="box-sub" fill="#99f6e4">6. Thumbnail</text>
+  <text x="842" y="1124" text-anchor="middle" class="box-sub">Extract JPEG</text>
+
+  <line x1="900" y1="1112" x2="925" y2="1112" stroke="#14b8a6" stroke-width="1.5" marker-end="url(#arrowGreen)"/>
+
+  <rect x="925" y="1085" width="115" height="55" rx="8" fill="url(#purple-box)" stroke="#a855f7" stroke-width="1"/>
+  <text x="982" y="1108" text-anchor="middle" class="box-sub" fill="#d8b4fe">7. Ready</text>
+  <text x="982" y="1124" text-anchor="middle" class="box-sub">status: ready</text>
+
+  <!-- Pipeline note -->
+  <text x="600" y="1175" text-anchor="middle" class="box-sub">Raw upload deleted after transcode  →  Frontend polls /api/videos/{id}/status until "ready"  →  Stream via HLS</text>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- AUTHENTICATION FLOW                         -->
+  <!-- ═══════════════════════════════════════════ -->
+  <text x="600" y="1240" text-anchor="middle" class="section-label" fill="#fbbf24">AUTHENTICATION FLOW (JWT)</text>
+
+  <rect x="60" y="1255" width="1080" height="100" rx="16" fill="#1a1000" stroke="#f59e0b" stroke-width="1" filter="url(#shadow)" opacity="0.9"/>
+
+  <rect x="90" y="1275" width="140" height="50" rx="8" fill="url(#amber-box)" stroke="#f59e0b" stroke-width="1"/>
+  <text x="160" y="1297" text-anchor="middle" class="box-sub" fill="#fde68a">Register / Login</text>
+  <text x="160" y="1313" text-anchor="middle" class="box-sub">POST /api/auth</text>
+
+  <line x1="230" y1="1300" x2="270" y2="1300" stroke="#fbbf24" stroke-width="1.5" marker-end="url(#arrowOrange)"/>
+
+  <rect x="270" y="1275" width="140" height="50" rx="8" fill="url(#green-box)" stroke="#22c55e" stroke-width="1"/>
+  <text x="340" y="1297" text-anchor="middle" class="box-sub" fill="#bbf7d0">Validate + Hash</text>
+  <text x="340" y="1313" text-anchor="middle" class="box-sub">bcryptjs</text>
+
+  <line x1="410" y1="1300" x2="450" y2="1300" stroke="#4ade80" stroke-width="1.5" marker-end="url(#arrowGreen)"/>
+
+  <rect x="450" y="1275" width="140" height="50" rx="8" fill="url(#blue-box)" stroke="#3b82f6" stroke-width="1"/>
+  <text x="520" y="1297" text-anchor="middle" class="box-sub" fill="#93c5fd">Sign JWT</text>
+  <text x="520" y="1313" text-anchor="middle" class="box-sub">jsonwebtoken (7d)</text>
+
+  <line x1="590" y1="1300" x2="630" y2="1300" stroke="#3b82f6" stroke-width="1.5" marker-end="url(#arrowBlue)"/>
+
+  <rect x="630" y="1275" width="170" height="50" rx="8" fill="url(#purple-box)" stroke="#a855f7" stroke-width="1"/>
+  <text x="715" y="1297" text-anchor="middle" class="box-sub" fill="#d8b4fe">Store in localStorage</text>
+  <text x="715" y="1313" text-anchor="middle" class="box-sub">Client-side</text>
+
+  <line x1="800" y1="1300" x2="840" y2="1300" stroke="#a855f7" stroke-width="1.5" marker-end="url(#arrowPurple)"/>
+
+  <rect x="840" y="1275" width="190" height="50" rx="8" fill="url(#teal-box)" stroke="#14b8a6" stroke-width="1"/>
+  <text x="935" y="1297" text-anchor="middle" class="box-sub" fill="#99f6e4">Attach to Requests</text>
+  <text x="935" y="1313" text-anchor="middle" class="box-sub">Axios interceptor (Bearer)</text>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- TECH STACK SUMMARY                          -->
+  <!-- ═══════════════════════════════════════════ -->
+  <text x="600" y="1410" text-anchor="middle" class="section-label" fill="#e2e8f0">TECH STACK</text>
+
+  <!-- Tech badges row 1 -->
+  <rect x="80" y="1425" width="130" height="36" rx="18" fill="#000000" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="145" y="1448" text-anchor="middle" class="box-sub" fill="#f8fafc">Next.js 14</text>
+
+  <rect x="225" y="1425" width="130" height="36" rx="18" fill="#000000" stroke="#22c55e" stroke-width="1"/>
+  <text x="290" y="1448" text-anchor="middle" class="box-sub" fill="#4ade80">Express.js</text>
+
+  <rect x="370" y="1425" width="130" height="36" rx="18" fill="#000000" stroke="#3b82f6" stroke-width="1"/>
+  <text x="435" y="1448" text-anchor="middle" class="box-sub" fill="#60a5fa">TypeScript</text>
+
+  <rect x="515" y="1425" width="130" height="36" rx="18" fill="#000000" stroke="#06b6d4" stroke-width="1"/>
+  <text x="580" y="1448" text-anchor="middle" class="box-sub" fill="#22d3ee">Tailwind CSS</text>
+
+  <rect x="660" y="1425" width="110" height="36" rx="18" fill="#000000" stroke="#f97316" stroke-width="1"/>
+  <text x="715" y="1448" text-anchor="middle" class="box-sub" fill="#fb923c">FFmpeg</text>
+
+  <rect x="785" y="1425" width="100" height="36" rx="18" fill="#000000" stroke="#a855f7" stroke-width="1"/>
+  <text x="835" y="1448" text-anchor="middle" class="box-sub" fill="#c084fc">HLS.js</text>
+
+  <rect x="900" y="1425" width="100" height="36" rx="18" fill="#000000" stroke="#ef4444" stroke-width="1"/>
+  <text x="950" y="1448" text-anchor="middle" class="box-sub" fill="#f87171">Redis</text>
+
+  <!-- Tech badges row 2 -->
+  <rect x="190" y="1475" width="100" height="36" rx="18" fill="#000000" stroke="#f59e0b" stroke-width="1"/>
+  <text x="240" y="1498" text-anchor="middle" class="box-sub" fill="#fbbf24">Bull</text>
+
+  <rect x="305" y="1475" width="110" height="36" rx="18" fill="#000000" stroke="#14b8a6" stroke-width="1"/>
+  <text x="360" y="1498" text-anchor="middle" class="box-sub" fill="#2dd4bf">Fuse.js</text>
+
+  <rect x="430" y="1475" width="100" height="36" rx="18" fill="#000000" stroke="#8b5cf6" stroke-width="1"/>
+  <text x="480" y="1498" text-anchor="middle" class="box-sub" fill="#a78bfa">lowdb</text>
+
+  <rect x="545" y="1475" width="100" height="36" rx="18" fill="#000000" stroke="#ec4899" stroke-width="1"/>
+  <text x="595" y="1498" text-anchor="middle" class="box-sub" fill="#f472b6">JWT</text>
+
+  <rect x="660" y="1475" width="110" height="36" rx="18" fill="#000000" stroke="#6366f1" stroke-width="1"/>
+  <text x="715" y="1498" text-anchor="middle" class="box-sub" fill="#818cf8">Multer</text>
+
+  <rect x="785" y="1475" width="120" height="36" rx="18" fill="#000000" stroke="#10b981" stroke-width="1"/>
+  <text x="845" y="1498" text-anchor="middle" class="box-sub" fill="#34d399">pnpm</text>
+
+  <!-- Footer -->
+  <text x="600" y="1560" text-anchor="middle" class="subtitle">StreamLocal v1.0.0  —  Zero Cloud Dependency  —  100% Local</text>
+  <text x="600" y="1580" text-anchor="middle" class="box-sub">github.com/UMESHA123/Video_Streaming</text>
+</svg>
